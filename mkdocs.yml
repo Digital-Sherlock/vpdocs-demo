@@ -1,0 +1,8 @@
+site_name: VPdocs Training Program
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme: 
+  name: 'material'
