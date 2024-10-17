@@ -1,14 +1,38 @@
 site_name: VPdocs Training Program
+site_url: http://localhost:8000
 
 nav:
   - Home: index.md
+  - Training Material:
+    - FortiClient:
+      - SSLVPN: training-material/FortiClient/SSLVPN/sslvpn.md
+      - IPsec VPN: training-material/FortiClient/ipsec/ipsec.md
+  - Practice: 
+    - Labs: practice/labs.md
+    - Quizzes: practice/quizzes.md
   - About: about.md
+
+
+plugins:
+  - social:
+      enabled: true
+      cache: true
+      cache_dir: .cache/plugins/social
+      cards: true
+      log: true
+      cards_dir: assets/images/social
+      cards_layout_dir: layouts
+      debug: true
+      debug_on_build: false
+      debug_grid: true
+      debug_grid_step: 32
+      debug_color: yellow
 
 theme: 
   name: 'material'
   palette:
     - scheme: default
-      primary: red
+      primary: black
       toggle:
         icon: material/brightness-4
         name: Switch to dark mode
@@ -17,6 +41,17 @@ theme:
       toggle:
         icon: material/brightness-5
         name: Switch to light mode
+  logo: assets/Fortinet-logo-rgb-white-red.png
+  features:
+    - navigation.tabs # header tabs
+    - navigation.sections # left sidebar navigation tabs
+    - navigation.expand # expand sidebar sections
+    - navigation.path # nav path on top
+    - navigation.top 
+    - toc.follow # sidebar nav follows w/ scrolling
+    - toc.integrate # page nav part of sidebar
+
+
 
 
   
