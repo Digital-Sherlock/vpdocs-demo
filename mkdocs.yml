@@ -1,12 +1,18 @@
-site_name: VPdocs Training Program
+site_name: VPdocs Support Training Program
 site_url: http://localhost:8000
 
 nav:
   - Home: index.md
-  - Training Material:
-    - FortiClient:
-      - SSLVPN: training-material/FortiClient/SSLVPN/sslvpn.md
-      - IPsec VPN: training-material/FortiClient/ipsec/ipsec.md
+  - FortiClientEMS:
+    - Overview: FortiClientEMS/index.md
+    - FortiClient VPN: 
+      - Initial Connection Issues: FortiClientEMS/VPN/init_conn.md
+      - Addressing VPN Drops: FortiClientEMS/VPN/vpndrops.md
+    - Zero Trust Network Access:
+      - FortiClient-side Issues: FortiClientEMS/ZTNA/client-side-issues.md
+  - FortiSASE:
+    - Secure Private Access: FortiSASE/SPA/spa.md
+    - IPsec VPN: FortiSASE/VPN/ipsec.md
   - Practice: 
     - Labs: practice/labs.md
     - Quizzes: practice/quizzes.md
@@ -27,6 +33,7 @@ plugins:
       debug_grid: true
       debug_grid_step: 32
       debug_color: yellow
+  - search
 
 theme: 
   name: 'material'
@@ -37,7 +44,7 @@ theme:
         icon: material/brightness-4
         name: Switch to dark mode
     - scheme: slate
-      primary: red
+      primary: teal
       toggle:
         icon: material/brightness-5
         name: Switch to light mode
@@ -50,6 +57,9 @@ theme:
     - navigation.top 
     - toc.follow # sidebar nav follows w/ scrolling
     - toc.integrate # page nav part of sidebar
+    - search.suggest
+    - search.highlight
+    - search.share
 
 
 
