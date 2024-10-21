@@ -24,6 +24,8 @@ Client side logs:
 
 **FortiGate** side: (VPN events)
 
+![FortiGate VPN Events](assets/User%20login%20failed.png)
+
 ## Step 3 - Run FortiGate CLI diagnostics for in-depth troubleshooting.
 
 If FortiClient logs alone don’t help, an engineer may need to retrieve additional data using FortiGate CLI diagnostic commands. Common commands one may find useful for VPN troubleshooting:
@@ -39,6 +41,7 @@ diag debug enable
 ![FortiGate diagnostics](assets/fosdebugs.png)
 
 Depending on a given case some commands can be added, removed, or modified:
+
 - For SAML authentication troubleshooting ```diag debug app samld -1``` can be added
 - For general authentication issues ```diag debug app fnbamd -1``` can be included
 
@@ -50,18 +53,37 @@ Common issues that one may come across in the logs particularly in Windows envir
 
 Named Windows pipes are used by FortiClient to connect applications like sslvpn, fortitray, gui together so they can “chain” their inputs and outputs to complete VPN connection. In essence, pipe is a file that FortiClient’s processes create and write data to as well as read data from. Common pipe errors indicate that FortiClient either fails to write to a pipe or read from it which may result in initial connection failure.
 
+![Broken Pipe](assets/broken%20pipe.png)
+
+More on [Named Pipes](https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipes).
+
 ### Windows API Errors
 
 When going through initial VPN connection workflow, FortiClient commands Microsoft API to send HTTPS requests to FortiGate in a form of API calls (/remote/info, /remote/saml/login, /remote/logincheck, etc.). You can spot these errors in the sslvpn logs following an API call. Example below:
 
 ***[sslvpnlib 2717 error] Request /remote/saml/login failed. LastError:12152***
 
+![WSA Error](assets/wsaerror.png)
+
+Note, sometimes these codes will be presented in hexadecimal format, hence, have to be converted to decimal (i.e. 2745 in hex equals to 10053 in decimal format).
+
 Searching these error codes on the Internet should give you a good understanding where to look next.
+
+You can lookup different WSA error codes on official Microsoft [web page](https://learn.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2).
 
 ### Environment
 
 Always keep an eye on the environment a given machine is in. Specifically, network environment outside of (ISP, proxies, firewalls, etc.) and within workstation (NIC, connection type (wired, wireless), drivers, security programs). The environment can play a critical role in contributing to VPN issues.
 
 Tools that may help in troubleshooting:
-- sniffer to identify network issues: Wireshark on endpoint, ```diagnose sniffer packet``` CLI suite on FortiGate
-- FortiGate VPN tunnel web mode for authentication verification (allows to eliminate FortiClient from the equation and verify whether authentication fails via web browser).
+
+- ***sniffer*** to identify network issues: Wireshark on endpoint, ```diagnose sniffer packet``` CLI suite on FortiGate
+- FortiGate VPN tunnel **web mode** for authentication verification (allows to eliminate FortiClient from the equation and verify whether authentication fails via web browser).
+- ***Allproducts.xml*** file part of every FortiClient's diagnostics contains a list of installed applications (Diagnostic_Result.zip\FCDiagData\install\Allproducts.xml)
+- ***SystemInfo.txt*** included in every diagnostics file shows system information including applications, crashes, drivers, OS details, etc.
+
+## Demo
+
+Below demo covers multiple initial connection failure scenarios and troubleshooting techniques for each of them.
+
+<div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://fortinet-my.sharepoint.com/personal/vpolovnikov_fortinet-us_com/_layouts/15/embed.aspx?UniqueId=3d412b8b-1af2-468d-8a93-14f953f5b0bf&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Demos-20241021_102111-Meeting Recording.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
