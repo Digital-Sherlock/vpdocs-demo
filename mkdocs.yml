@@ -25,19 +25,19 @@ nav:
 
 
 plugins:
-  - social:
-      enabled: true
-      cache: true
-      cache_dir: .cache/plugins/social
-      cards: true
-      log: true
-      cards_dir: assets/images/social
-      cards_layout_dir: layouts
-      debug: true
-      debug_on_build: false
-      debug_grid: true
-      debug_grid_step: 32
-      debug_color: yellow
+  # - social:
+  #     enabled: true
+  #     cache: true
+  #     cache_dir: .cache/plugins/social
+  #     cards: true
+  #     log: true
+  #     cards_dir: assets/images/social
+  #     cards_layout_dir: layouts
+  #     debug: true
+  #     debug_on_build: false
+  #     debug_grid: true
+  #     debug_grid_step: 32
+  #     debug_color: yellow
   - search
 
 theme: 
