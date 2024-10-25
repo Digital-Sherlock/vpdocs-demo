@@ -82,8 +82,27 @@ Tools that may help in troubleshooting:
 - ***Allproducts.xml*** file part of every FortiClient's diagnostics contains a list of installed applications (Diagnostic_Result.zip\FCDiagData\install\Allproducts.xml)
 - ***SystemInfo.txt*** included in every diagnostics file shows system information including applications, crashes, drivers, OS details, etc.
 
-## Demo
+## Demos
 
-Below demo covers multiple initial connection failure scenarios and troubleshooting techniques for each of them.
+Below demos cover multiple initial connection failure scenarios and troubleshooting techniques for addressing of them.
 
-<div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://fortinet-my.sharepoint.com/personal/vpolovnikov_fortinet-us_com/_layouts/15/embed.aspx?UniqueId=3d412b8b-1af2-468d-8a93-14f953f5b0bf&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Demos-20241021_102111-Meeting Recording.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+### VPN Permission Denied
+
+It's quite common to see "Permission Denied" error as one of those causing VPN connection failures.
+
+![System Tray Permission Denied](assets/permissiondeniedtray.png) ![FortiGate VPN Events permissioned denied](assets/vpneventspermdenied.png)
+
+Below demo will demonstrate how to debug and address issues like this.
+
+<div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="
+https://fortinet-my.sharepoint.com/personal/vpolovnikov_fortinet-us_com/_layouts/15/embed.aspx?UniqueId=dd8bfee6-c6ce-4d1f-8157-8d9298697e46&nav=%7B%22playbackOptions%22%3A%7B%22startTimeInSeconds%22%3A3%7D%7D&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Demos-20241022_153013-Meeting Recording.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+
+### SAML Authentication Issues
+
+SAML authentication for VPN is increasingly popular, hence, it's critical to understand how to troubleshoot it.
+
+The following demo presents a common SAML authenitcation issue and suggets a trobleshooting approach an engineer can follow.
+
+
+

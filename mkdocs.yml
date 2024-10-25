@@ -8,6 +8,8 @@ nav:
     - FortiClient VPN: 
       - Initial Connection Issues: FortiClientEMS/VPN/init_conn.md
       - Addressing VPN Drops: FortiClientEMS/VPN/vpndrops.md
+      - VPN Performance: FortiClientEMS/VPN/vpn_perf.md
+      - Auto-Connect and Always-up: FortiClientEMS/VPN/auto_connect.md
     - Zero Trust Network Access:
       - FortiClient-side Issues: FortiClientEMS/ZTNA/client-side-issues.md
   - FortiSASE:
@@ -16,6 +18,9 @@ nav:
   - Practice: 
     - Labs: practice/labs.md
     - Quizzes: practice/quizzes.md
+  - Demos:
+    - FortiClientEMS: Demos/forticlient_demos.md
+    - FortiSASE: Demos/fortisase_demos.md
   - About: about.md
 
 
@@ -60,6 +65,18 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
 
 
 
