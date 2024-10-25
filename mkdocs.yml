@@ -10,6 +10,7 @@ nav:
       - Addressing VPN Drops: FortiClientEMS/VPN/vpndrops.md
       - VPN Performance: FortiClientEMS/VPN/vpn_perf.md
       - Auto-Connect and Always-up: FortiClientEMS/VPN/auto_connect.md
+      - DNS Issues: FortiClientEMS/VPN/dns.md
     - Zero Trust Network Access:
       - FortiClient-side Issues: FortiClientEMS/ZTNA/client-side-issues.md
   - FortiSASE:
