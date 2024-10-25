@@ -1,4 +1,4 @@
-Landing Page...
+<img src="assets/fortinet.jpg" alt="Fortinet logo" width="700" height="400">
 
 ## Training Material
 

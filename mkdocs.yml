@@ -14,6 +14,7 @@ nav:
     - Zero Trust Network Access:
       - FortiClient-side Issues: FortiClientEMS/ZTNA/client-side-issues.md
   - FortiSASE:
+    - Overview: FortiSASE/index.md
     - Secure Private Access: FortiSASE/SPA/spa.md
     - IPsec VPN: FortiSASE/VPN/ipsec.md
   - Practice: 
