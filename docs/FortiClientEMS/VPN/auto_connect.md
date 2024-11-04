@@ -1,6 +1,9 @@
 # Auto-Connect and Always-up Issues
 
-Troubleshooting auto-connect and always-up features comes down to (1) knowing what log files to analyze and (2) "following" the log.
+Troubleshooting auto-connect and always-up features comes down to:
+
+1. Knowing what log files to analyze
+2. "following" the log
 
 ## Step 1 – Understand the setup.
 

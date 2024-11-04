@@ -41,6 +41,8 @@ Advise on improvements (if any). For instance, if SSLVPN is used, one may sugges
 
 When performing such comparison, start with FC connected to VPN. Take a note of the speed test server selected by the speed test provider with VPN ON. Disconnect VPN and run a speed test against the same speed test server. It'll make sure the path towards the server is similar so the speed test results can be compared.
 
+![](assets/Speed%20Test%20Diagram.png)
+
 ### Evaluate endpoint software posture.
 
 Check for 3d party security programs (EDR, AV, WF, proxies, etc.) and system drivers installed on workstation. These programs have a potential for affecting FortiClient VPN performance by blocking, analyzing, proxying outbound VPN traffic or interfering with FortiClient processes or drivers. A list of Windows system drivers can be found in FortiClient diagnostics or collected via **`msinfo32 /nfo C:\TEMP\TEST.NFO`** command on Windows. For macOS, check system extensions by running **`systemextensionsct list`** command.

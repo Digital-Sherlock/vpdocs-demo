@@ -12,11 +12,18 @@ nav:
       - Auto-Connect and Always-up: FortiClientEMS/VPN/auto_connect.md
       - DNS Issues: FortiClientEMS/VPN/dns.md
     - Zero Trust Network Access:
-      - FortiClient-side Issues: FortiClientEMS/ZTNA/client-side-issues.md
+      - Overview: FortiClientEMS/ZTNA/index.md
+      - ZTNA Certificate: FortiClientEMS/ZTNA/ztna_certificate.md
+      - Posture Tags: FortiClientEMS/ZTNA/posture_tags.md
+      - ZTNA connection issues: FortiClientEMS/ZTNA/ztna_server_conn.md
+      - Fabric Connector issues: FortiClientEMS/ZTNA/fabric_connector.md
+      - FortiGate WAD diagnostics analysis: FortiClientEMS/ZTNA/wad_diags.md
   - FortiSASE:
     - Overview: FortiSASE/index.md
     - Secure Private Access: FortiSASE/SPA/spa.md
     - IPsec VPN: FortiSASE/VPN/ipsec.md
+  - FortiNextDLP:
+    - Overview: FortiNextDLP/index.md
   - Practice: 
     - Labs: practice/labs.md
     - Quizzes: practice/quizzes.md
@@ -67,6 +74,8 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.code.annotate
+    - content.footnote.tooltips
 
 markdown_extensions:
   - admonition
@@ -79,6 +88,7 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - md_in_html
+  - footnotes
 
 
 

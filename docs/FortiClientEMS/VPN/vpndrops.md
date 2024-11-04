@@ -68,16 +68,19 @@ Below is an example of having SSLVPN diagnostics (left) running simaltaneously w
 In the above example the following commands were executed:
 
 
-```
+``` bash
 diagnose debug application sslvpn -1
-diagnose vpn ssl debug-filter src-addr4 X.X.X.X
+diagnose vpn ssl debug-filter src-addr4 X.X.X.X # (1)
 diagnose debug enable
 ```
 
+1. "X.X.X.X" is a public IP of the endpoint.
+
+``` bash
+diag sniffer packet ssl.root "host X.X.X.X and port 9443" 6 0 l # (1)
 ```
-diag sniffer packet ssl.root "host X.X.X.X and port 9443" 6 0 l
-```
-... where "X.X.X.X" is a public IP of the endpoint.
+
+1. "X.X.X.X" is a public IP of the endpoint.
 
 Note **6 0 l** at the end of the sniffer command. This switch will allow to convert the sniffer CLI output into .pcap format for use in Wireshark.
 
