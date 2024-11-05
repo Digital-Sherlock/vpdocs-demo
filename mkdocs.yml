@@ -3,32 +3,43 @@ site_url: http://localhost:8000
 
 nav:
   - Home: index.md
-  - FortiClientEMS:
-    - Overview: FortiClientEMS/index.md
-    - FortiClient VPN: 
-      - Initial Connection Issues: FortiClientEMS/VPN/init_conn.md
-      - Addressing VPN Drops: FortiClientEMS/VPN/vpndrops.md
-      - VPN Performance: FortiClientEMS/VPN/vpn_perf.md
-      - Auto-Connect and Always-up: FortiClientEMS/VPN/auto_connect.md
-      - DNS Issues: FortiClientEMS/VPN/dns.md
+  - FortiClient:
+    - Overview: FortiClient/index.md
+    - New features:
+      - Overview: FortiClient/New features/index.md
+      - 7.4.1: FortiClient/New features/7.4.1.md
+    - FortiClient VPN:
+      - Overview: FortiClient/VPN/index.md
+      - Initial Connection Issues: FortiClient/VPN/init_conn.md
+      - Addressing VPN Drops: FortiClient/VPN/vpndrops.md
+      - VPN Performance: FortiClient/VPN/vpn_perf.md
+      - Auto-Connect and Always-up: FortiClient/VPN/auto_connect.md
+      - DNS Issues: FortiClient/VPN/dns.md
     - Zero Trust Network Access:
-      - Overview: FortiClientEMS/ZTNA/index.md
-      - ZTNA Certificate: FortiClientEMS/ZTNA/ztna_certificate.md
-      - Posture Tags: FortiClientEMS/ZTNA/posture_tags.md
-      - ZTNA connection issues: FortiClientEMS/ZTNA/ztna_server_conn.md
-      - Fabric Connector issues: FortiClientEMS/ZTNA/fabric_connector.md
-      - FortiGate WAD diagnostics analysis: FortiClientEMS/ZTNA/wad_diags.md
+      - Overview: FortiClient/ZTNA/index.md
+      - ZTNA Certificate: FortiClient/ZTNA/ztna_certificate.md
+      - Posture Tags: FortiClient/ZTNA/posture_tags.md
+      - ZTNA connection issues: FortiClient/ZTNA/ztna_server_conn.md
+      - Fabric Connector issues: FortiClient/ZTNA/fabric_connector.md
+      - FortiGate WAD diagnostics analysis: FortiClient/ZTNA/wad_diags.md
+  - EMS:
+    - Overview: EMS/index.md
+    - New features:
+      - Overview: EMS/New features/index.md
+      - 7.4.1: EMS/New features/7.4.1.md
+    - EMS on Linux:
+      - Navigating Linux: EMS/Linux/linux_basics.md
   - FortiSASE:
     - Overview: FortiSASE/index.md
     - Secure Private Access: FortiSASE/SPA/spa.md
     - IPsec VPN: FortiSASE/VPN/ipsec.md
-  - FortiNextDLP:
-    - Overview: FortiNextDLP/index.md
+  - FortiDLP:
+    - Overview: FortiDLP/index.md
   - Practice: 
     - Labs: practice/labs.md
     - Quizzes: practice/quizzes.md
   - Demos:
-    - FortiClientEMS: Demos/forticlient_demos.md
+    - FortiClient: Demos/forticlient_demos.md
     - FortiSASE: Demos/fortisase_demos.md
   - About: about.md
 
@@ -51,6 +62,7 @@ plugins:
 
 theme: 
   name: 'material'
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: black
@@ -68,7 +80,8 @@ theme:
     - navigation.sections # left sidebar navigation tabs
     - navigation.expand # expand sidebar sections
     - navigation.path # nav path on top
-    - navigation.top 
+    - navigation.top
+    - navigation.indexes
     - toc.follow # sidebar nav follows w/ scrolling
     - toc.integrate # page nav part of sidebar
     - search.suggest
@@ -76,6 +89,8 @@ theme:
     - search.share
     - content.code.annotate
     - content.footnote.tooltips
+    - header.autohide
+    - announce.dismiss
 
 markdown_extensions:
   - admonition
@@ -89,6 +104,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
 
