@@ -91,7 +91,7 @@ It goes without saying that an engineer must understand how different scenarios 
 
 Logs have to be collected from each component of ZT infrastructure – FortiClient, FortiGate, and EMS – though may vary depending on a given case [^1]. 
 
-[^1]: See Appendix (Logs) section for a complete list.
+[^1]: See Logs section under ZTNA [landing page](index.md) for a complete list.
 
 1. FortiClient
     - FortiClient diagnostics and logs (FortiESNAC or epctrl.log depending on OS) will tell whether machine has desired tag(s). This is the first place to start verifying tag mismatch issues.
