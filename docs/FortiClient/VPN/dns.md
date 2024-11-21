@@ -42,4 +42,8 @@ Here's a helpful resource explaining [how DNS works on Windows](https://serverfa
 
 ## Demo
 
-A demo going over DNS issues on macOS.
+A demo goes over DNS issues on macOS.
+
+<div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="
+https://fortinet-my.sharepoint.com/personal/vpolovnikov_fortinet-us_com/_layouts/15/embed.aspx?UniqueId=fcc0b7fc-c957-461a-8fca-3a4f60dc01ce&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Demos-20241107_122454-Meeting Recording.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>

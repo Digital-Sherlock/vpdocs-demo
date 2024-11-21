@@ -7,6 +7,8 @@ Let’s break them down and examine the strategies of addressing these issues.
 
 ## Connector Failure
 
+![Fabric Connector failure image](assets/fabric%20connector%20failure.png)
+
 Similar techniques can be employed for addressing connector failures or instabilities. The difference will be the timing due to sporadic nature of connector stability issues.
 
 ### Step 1 – Examine the error code.

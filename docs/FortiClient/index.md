@@ -6,7 +6,7 @@ This section of the program covers FortiClient, its features, issues, and ways t
 
 Fortinet official FortiClient [documentation](https://docs.fortinet.com/product/forticlient/7.4).
 
-## FortiClient VPN Document Cards
+## FortiClient Document Cards
 
 <div class="grid cards" markdown>
 - :fontawesome-regular-user: Check out <a href="VPN">__FortiClient VPN__</a>!
