@@ -1,3 +1,5 @@
+For comprehensive troubleshooting guidelines and supplementary materials visit [FortiClient](../FortiClient/index.md) page.
+
 ## FortiClient VPN
 
 ### Initial Connection Issues
